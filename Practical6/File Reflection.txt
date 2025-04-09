@@ -1,0 +1,5 @@
+For Practical6, I think it's quite difficult for us beginners.
+In the SIR_vaccination.py, I need to consider many conditions, like infected equals 0 and vaccination equals the whole population,
+    if I don't consider them , the code will be lose
+In the spatial_SIR.py, I use lots of loops to achieve the goal, which is quite confusing.
+All in all I think it's chanllenging and can help us improve our python skills.
