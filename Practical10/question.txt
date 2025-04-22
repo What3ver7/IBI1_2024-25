@@ -1,0 +1,9 @@
+How has the relationship between the DALYs in China and the UK changed over time?
+Are they becoming more similar, less similar?
+
+Code starting line number: 48
+
+Result Analysis:
+From the chart, it can be observed that the trends of DALYs in China and the UK do follow the same pattern over time. 
+In some years, China has higher DALYs, while the UK has relatively lower DALYs. 
+But both of trends are decreasing.
