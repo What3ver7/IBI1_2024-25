@@ -10,7 +10,7 @@
 
 # Import libraries
 # randint allows drawing a random number,
-# e.g. randint(1,5) draws a number between 1 and 5
+# e.g. randint(1,6) draws a number between 1 and 6
 from random import randint
 
 # ceil takes the ceiling of a number, i.e. the next higher integer.
