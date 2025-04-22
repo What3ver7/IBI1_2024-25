@@ -1,4 +1,4 @@
 Hello, my name is What3ver7.
 I like drinking milk and eating bread.
 I am enjoying playing computer games. 
-I am happy that I can push my repo from Visual Studio Code to GitHub, too
+I am happy that I can push my repo from Visual Studio Code to GitHub, too.
