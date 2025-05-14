@@ -1,5 +1,6 @@
 #import library to read fasta file
 from Bio import SeqIO
+import blosum as bl
 
 #def a fucntion to load sequence from fasta file
 def load_seq(file):
@@ -7,14 +8,16 @@ def load_seq(file):
 
 #def a function to calculate Hamming distance and percentage of identical amino acids
 def Hamming_distance(seq1, seq2):
-    edit_distance = 0
-    identical_amino_acid = len(seq1)
+    distance=0
+    identical_amino_acid=0
     for i in range(len(seq1)):
-        if seq1[i] != seq2[i]:
-            edit_distance += 1
-            identical_amino_acid -= 1
+        if seq1[i]==seq2[i]:
+            distance+=matrix[seq1[i]][seq2[i]]
+            identical_amino_acid+=1
     identical_percentage = identical_amino_acid / len(seq1) * 100
-    return edit_distance, identical_percentage
+    return distance, identical_percentage
+
+matrix=bl.BLOSUM(62)
 
 #name the seq
 human_seq = load_seq("human_sod2.fasta")
