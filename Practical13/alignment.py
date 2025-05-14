@@ -1,43 +1,32 @@
-def read_sequence(seq_name):
-    with open(seq_name) as seq:
-        lines=seq.read().splitlines()
-    return ''.join([line for line in lines if not line.startswith(">")])
+#import library to read fasta file
+from Bio import SeqIO
 
-def read_BLOSUM62(matrix_name):
-    matrix={}
-    with open(matrix_name) as m:
-        lines=[]
-        for line in m:
-            line=line.strip()
-            lines.append(line)
+#def a fucntion to load sequence from fasta file
+def load_seq(file):
+    return str(next(SeqIO.parse(file, 'fasta')).seq)
 
-        headers = lines[0].split()
-        for line in lines[1:]:
-            parts = line.split()
-            row_aa = parts[0] 
-            for i in range(1, len(parts)):
-                col_aa = headers[i - 1]
-                score = int(parts[i])
-                matrix[(row_aa, col_aa)] = score
-    
-    return matrix
+#def a function to calculate Hamming distance and percentage of identical amino acids
+def Hamming_distance(seq1, seq2):
+    edit_distance = 0
+    identical_amino_acid = len(seq1)
+    for i in range(len(seq1)):
+        if seq1[i] != seq2[i]:
+            edit_distance += 1
+            identical_amino_acid -= 1
+    identical_percentage = identical_amino_acid / len(seq1) * 100
+    return edit_distance, identical_percentage
 
-def compare_sequence(seq1,seq2,matrix):
-    score=0
-    matches=0
-    for a,b in zip(seq1,seq2):
-        if (a,b) in matrix:
-            score+=matrix[(a,b)]
-        else:
-            score+=0
-        if a==b:
-            matches+=1
-    identity=matches/len(seq1)*100
-    return score, identity
+#name the seq
+human_seq = load_seq("human_sod2.fasta")
+mouse_seq = load_seq("mouse_sod2.fasta")
+random_seq = load_seq("random.fasta")
 
-seq1=read_sequence(r"D:\IBI1\IBI1_2024-25\Practical13\mouse_sod2.fasta")
-seq2=read_sequence(r"D:\IBI1\IBI1_2024-25\Practical13\random.fasta")
-matrix=read_BLOSUM62(r"D:\IBI1\IBI1_2024-25\Practical13\BLOSUM62.txt")
+#calculate Hamming distance and percentage of identical amino acids
+distance_human_mouse = Hamming_distance(human_seq, mouse_seq)
+distance_human_random = Hamming_distance(human_seq, random_seq)
+distance_mouse_random = Hamming_distance(mouse_seq, random_seq)
 
-score, identity=compare_sequence(seq1, seq2, matrix)
-print(f"Score: {score}, Identity: {identity:.2f}%")
+#print the result
+print(f'The Hamming distance between human and mouse SOD2 sequences is: {distance_human_mouse[0]}, and the percentage of identical amino acids is: {distance_human_mouse[1]}%')
+print(f'The Hamming distance between human SOD2 sequence and random sequence is: {distance_human_random[0]}, and the percentage of identical amino acids is: {distance_human_random[1]}%')
+print(f'The Hamming distance between mouse SOD2 sequence and random sequence is: {distance_mouse_random[0]}, and the percentage of identical amino acids is: {distance_mouse_random[1]}%')
