@@ -11,8 +11,8 @@ def Hamming_distance(seq1, seq2):
     distance=0
     identical_amino_acid=0
     for i in range(len(seq1)):
+        distance+=matrix[seq1[i]][seq2[i]]
         if seq1[i]==seq2[i]:
-            distance+=matrix[seq1[i]][seq2[i]]
             identical_amino_acid+=1
     identical_percentage = identical_amino_acid / len(seq1) * 100
     return distance, identical_percentage

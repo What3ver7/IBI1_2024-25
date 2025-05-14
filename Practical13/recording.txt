@@ -1,7 +1,7 @@
 The length of sod2 is 222.
 This protein is located in the mitochondrial matrix.
 The range of percentage identities in the reported online BLAST results is from 58.1% to 100%.
-The Hamming distance between human and mouse SOD2 sequences is: 1096, and the percentage of identical amino acids is: 90.09009009009009%
-The Hamming distance between human SOD2 sequence and random sequence is: 46, and the percentage of identical amino acids is: 4.054054054054054%
-The Hamming distance between mouse SOD2 sequence and random sequence is: 33, and the percentage of identical amino acids is: 3.153153153153153%
+The Hamming distance between human and mouse SOD2 sequences is: 1097, and the percentage of identical amino acids is: 90.09009009009009%
+The Hamming distance between human SOD2 sequence and random sequence is: -252, and the percentage of identical amino acids is: 4.054054054054054%
+The Hamming distance between mouse SOD2 sequence and random sequence is: -266, and the percentage of identical amino acids is: 3.153153153153153%
 From the result, we can find the human_sod2 and mouse_sod2 are most related.
