@@ -5,3 +5,4 @@ The Hamming distance between human and mouse SOD2 sequences is: 1097, and the pe
 The Hamming distance between human SOD2 sequence and random sequence is: -252, and the percentage of identical amino acids is: 4.054054054054054%
 The Hamming distance between mouse SOD2 sequence and random sequence is: -266, and the percentage of identical amino acids is: 3.153153153153153%
 From the result, we can find the human_sod2 and mouse_sod2 are most related.
+Mouse is a better model organism for human.
