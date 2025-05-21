@@ -6,7 +6,7 @@ for intron in introns:
     intron_length=intron.end()-intron.start()
     if intron_length>max_intron_length:
         max_intron_length=intron_length
-print(f"The max length is {max_intron_length}.")
+print("The max length is %d." % max_intron_length)
 
 #Initialize variables
 #sequence <- 'ATGCAAGTGGTGTGTCTGTTCTGAGAGGGCCTAA'

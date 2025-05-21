@@ -1,5 +1,5 @@
 import re
-with open("D:\VS CODE\gitgit\IBI1_2024-25\Homework\Practical7\Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa","r") as infile, open("D:\VS CODE\gitgit\IBI1_2024-25\Homework\Practical7\\tata_genes.fa","w") as outfile:
+with open("Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa","r") as infile, open("tata_genes.fa","w") as outfile:
     gene_name=""
     sequence=""
     for line in infile:

@@ -38,7 +38,7 @@ while splice_input not in splice_combinations:
     print('invalid input. try again')
     splice_input=input(f'enter splice combination {splice_combinations[:]}').strip().upper()
 output_filename=f'{splice_input}_spliced_genes.fa'
-with open('D:\VS CODE\gitgit\IBI1_2024-25\Homework\Practical7\Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa', 'r') as infile, open(f"D:\VS CODE\gitgit\IBI1_2024-25\Homework\Practical7\\{output_filename}_spliced_genes.fa", 'w') as outfile:
+with open('Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa', 'r') as infile, open(f"{output_filename}_spliced_genes.fa", 'w') as outfile:
     current_gene=[]
     tata_pattern=re.compile(r'TATA[AT]A[AT]')
     gene_name_pattern=re.compile(r'gene:(\S+)')
