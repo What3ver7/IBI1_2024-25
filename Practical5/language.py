@@ -28,4 +28,4 @@ x=input("which language?")
 if x in dict:
     print(f"the percentage of developers who use this language is {dict[x]}")
 else:
-    print("language not found")
+    print("language not found.")
